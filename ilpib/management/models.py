@@ -3,8 +3,6 @@ from django.db import models
 from django.utils.text import slugify
 from django.contrib.auth.models import User
 from simple_history.models import HistoricalRecords
-from collections import OrderedDict
-
 
 class Post(models.Model):
     title = models.CharField(max_length=100)
@@ -30,6 +28,11 @@ class Post(models.Model):
                 unique_keywords.append(keyword)
 
         self.keywords = ', '.join(unique_keywords)
+
+        if len(unique_keywords) < 3:
+            raise ValidationError({
+                'keywords': "Musisz podać co najmniej 3 różne słowa kluczowe."
+            })
 
         if self.title.lower() in [k.lower() for k in unique_keywords]:
             raise ValidationError({
