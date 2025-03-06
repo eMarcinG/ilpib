@@ -18,7 +18,6 @@ class Post(models.Model):
     history = HistoricalRecords()
 
     def clean(self):
-
         raw_keywords = self.keywords.split(',')
         processed_keywords = [k.strip() for k in raw_keywords if k.strip()]
 
@@ -28,10 +27,9 @@ class Post(models.Model):
             lower_keyword = keyword.lower()
             if lower_keyword not in seen:
                 seen.add(lower_keyword)
-                unique_keywords.append(keyword) 
-        
-        self.keywords = ', '.join(unique_keywords)
+                unique_keywords.append(keyword)
 
+        self.keywords = ', '.join(unique_keywords)
 
         if self.title.lower() in [k.lower() for k in unique_keywords]:
             raise ValidationError({

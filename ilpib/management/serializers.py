@@ -13,7 +13,3 @@ class PostSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("Musisz podać co najmniej 3 różne słowa kluczowe.")
         return value
 
-    def validate(self, data):
-        if data['title'] in data['keywords']:
-            raise serializers.ValidationError("Słowa kluczowe i nazwa muszą być różne.")
-        return data
