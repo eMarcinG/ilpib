@@ -1,0 +1,3 @@
+ilpib/.env
+*.pyc
+__pycache__/
