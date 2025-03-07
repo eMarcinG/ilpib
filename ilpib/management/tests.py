@@ -23,7 +23,7 @@ class PostModelTests(TestCase):
             post.save()
         except ValidationError:
             self.fail(
-                'Post with valid keywords raised ValidationError unexpectedly!')
+                'Błędny post!')
 
     def test_post_with_insufficient_keywords(self):
         post = Post(
