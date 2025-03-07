@@ -4,6 +4,7 @@ from django.utils.text import slugify
 from django.contrib.auth.models import User
 from simple_history.models import HistoricalRecords
 
+
 class Post(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField(max_length=1024)
