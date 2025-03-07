@@ -1,0 +1,49 @@
+###
+POST http://localhost:8000/api/token/
+content-type: application/json
+
+{
+    "username": "username",
+    "password": "password"
+}
+
+###
+GET http://localhost:8000/api/posts/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQxMjk4MjEzLCJpYXQiOjE3NDEyOTc5MTMsImp0aSI6IjhjNmFmYzE5ZTZmZTRmYzZhNjIwZWQ3ZWIwNmVlZjk1IiwidXNlcl9pZCI6MX0.HWKBfUeLHjZREPe34S0wwMgk4Ku-FW21gWh5BCWPiY0
+
+{
+
+}
+
+###
+POST http://localhost:8000/api/posts/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQxMjk5NjkzLCJpYXQiOjE3NDEyOTkzOTMsImp0aSI6IjYxOGVjOGMzMjM2YzQ5NWZiYTJmZjlhNGYyZWQ2YmM4IiwidXNlcl9pZCI6MX0.xkUjRe_E8ZkwFRVuBJNftFAAmakiZ887qAwrEBdiLhE
+
+{
+    "title": "słowo   1",
+    "description": "Opis mojego pierwszego posta.",
+    "keywords": "słowo  1  , słowo  1, słowo3",
+    "url": "http://example.com"
+}
+
+###
+DELETE http://localhost:8000/api/posts/1/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQxMzMyNTcyLCJpYXQiOjE3NDEzMzIyNzIsImp0aSI6IjY3ZDgwNGU0ZmYyNTQwY2Q5ZTlkNDI3MzE5NmMxYmY0IiwidXNlcl9pZCI6MX0.CgQIQbazXwAkRBh9IjtS14U-fV6gw2UaS7KGrmX9SyA
+
+{
+
+}
+
+###
+PATCH http://localhost:8000/api/posts/2/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQxMzMyNTcyLCJpYXQiOjE3NDEzMzIyNzIsImp0aSI6IjY3ZDgwNGU0ZmYyNTQwY2Q5ZTlkNDI3MzE5NmMxYmY0IiwidXNlcl9pZCI6MX0.CgQIQbazXwAkRBh9IjtS14U-fV6gw2UaS7KGrmX9SyA
+
+{
+
+}
+
+###
