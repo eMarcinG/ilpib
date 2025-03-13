@@ -17,7 +17,7 @@ Projekt zawiera również testy jednostkowe, które zapewniają poprawność dzi
 
 ### Krok 1: Sklonuj repozytorium
 
-git clone zzz
+git clone https://github.com/eMarcinG/ilpib.git
 
 ### Krok 2: Dodaj plik .env
 
